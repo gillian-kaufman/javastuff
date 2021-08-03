@@ -1,43 +1,37 @@
-// Class declaration
 public class Account
-{	// Instance variable declaration
+{
 	private double balance;
 	
-	// Constructor declaration
-	// initializes the value of instance variable
-	public Account (double initialBalance)
+	public Account(double initialBal)
 	{
-		balance = initialBalance;
+		balance = initialBal;
 	}
-	//Second constructor
-	public Account () 
+	public Account()
 	{
-		balance = 0;
+		balance = 0.0;
 	}
-	
-	// Instance method declaration
-	// void is the return type for the method
-	public void deposit (double amount)
-	{
-		balance += amount;
-	}
-	public void withdraw (double amount)
-	{
-		balance -= amount;
-	}
-	public double checkBalance ()
+	public double getBalance()
 	{
 		return balance;
 	}
-	
-	// toString is used to convert contents 
-	// of object into String format
-	public String toString ()
+	public void setBalance(double amount)
 	{
-		return "balance: " + balance;
-		//String concatenation
+		balance = amount;
 	}
-} // End class
-	
-
-
+	public void deposit(double amount)
+	{
+		balance += amount;
+	}
+	public void withdraw(double amount)
+	{
+		balance -= amount;
+	}
+	public void close()
+	{
+		balance = 0.0;
+	}
+	public void printStatement()
+	{
+		System.out.println(balance);
+	}
+}

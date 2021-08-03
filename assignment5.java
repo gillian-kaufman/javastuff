@@ -6,7 +6,7 @@ public class assignment5
 	public static void main (String[] args)
 	{
 		//Get strings from command line
-		String x = args[0], y = args[1];
+		String x = args[1], y = args[2];
 		
 		//Find lengths of both strings
 		int m = x.length(), n = y.length();
