@@ -183,9 +183,9 @@ public class seniorsem
             if (patIndex == pat.size())
             {
                 ++count;
-                System.out.println("Match found at: " + (i-patIndex));  //For printing the first match location
+                //System.out.println("Match found at: " + (i-patIndex));  //For printing the first match location
                 patIndex = lps[patIndex-1];
-                break;    //For only finding first match in input
+                //break;    //For only finding first match in input
             }
             //If a mismatch is found
             else if (i < con.size() && pat.get(patIndex) != con.get(i))
@@ -197,7 +197,7 @@ public class seniorsem
                     ++i;
             }
         }
-        //System.out.println("Matches: " + count);
+        System.out.println("Matches: " + count);
     }
     //Boyer-Moore Algorithm
     public static void BM(String pattern, List<String> content)
@@ -230,7 +230,7 @@ public class seniorsem
             if (i < 0)
             {
                 ++count;
-                System.out.println("Match found at: " + index); //For printing the first match location
+                //System.out.println("Match found at: " + index); //For printing the first match location
                 //move index so that the next character of the content is
                 //aligned with the last occurrence of it in the pattern
                 if (index+plen < clen)      //in case the pattern is at the end of the content
@@ -241,7 +241,7 @@ public class seniorsem
                 {
                     index += 1;
                 }
-                break; //for finding only the first match
+                //break; //for finding only the first match
             }
             //else shift the pattern so the mismatched character in the content
             //aligns with the last occurrence of it in the pattern
@@ -250,7 +250,7 @@ public class seniorsem
                 index += max(1, i-charCount[con.get(index+i)]);
             }
         }
-        //System.out.println("Matches: " + count);
+        System.out.println("Matches: " + count);
     }
     //Two-way algorithm
     public static void TW(String pattern, List<String> content) {
@@ -290,8 +290,8 @@ public class seniorsem
                         --i;
                     if (i <= memory) {
                         result.add(j);
-                        System.out.println("Match found at: " + j); //For printing the first match location
-                        break;    //For only finding the first match
+                        //System.out.println("Match found at: " + j); //For printing the first match location
+                        //break;    //For only finding the first match
                     }
                     j += per;
                     memory = m - per - 1;
@@ -313,8 +313,8 @@ public class seniorsem
                         --i;
                     if (i < 0) {
                         result.add(j);
-                        System.out.println("Match found at: " + j); //For printing the first match location
-                        break;    //For only finding the first match
+                        //System.out.println("Match found at: " + j); //For printing the first match location
+                        //break;    //For only finding the first match
                     }
                     j += per;
                 } else
@@ -325,7 +325,7 @@ public class seniorsem
         {
             count = result.size();
         }
-        //System.out.println("Matches: " + count);
+        System.out.println("Matches: " + count);
     }
 
     //Timing method for getting the running time for each algorithm
