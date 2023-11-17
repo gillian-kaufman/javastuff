@@ -9,6 +9,7 @@ import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.security.SecureRandom;
 import java.util.*;
 
 public class IntegerFiles
@@ -36,7 +37,7 @@ public class IntegerFiles
 				// Wrap the writer with buffered streams
 				BufferedWriter writer = new BufferedWriter(fw);
 				int line;
-				Random random = new Random();
+				Random random = new SecureRandom();
 				while (n > 0)
 				{
 					// Randomize an integer and write it to the output file

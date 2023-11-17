@@ -1,3 +1,4 @@
+import java.security.SecureRandom;
 import java.util.Random;
 
 public final class Project1v2
@@ -5,7 +6,7 @@ public final class Project1v2
     static private int seqStart = 0; // Will be set to start index of the subarray of maximum subsequent sum
     static private int seqEnd = -1; // Will be set to end index of the subarray of maximum subsequent sum
     
-    private static Random rand = new Random( ); // Create object of Random class for generating random integers
+    private static Random rand = new SecureRandom( ); // Create object of Random class for generating random integers
 
     /**
      * Cubic maximum contiguous subsequence sum algorithm.

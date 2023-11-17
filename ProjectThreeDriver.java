@@ -1,14 +1,10 @@
-/* Author: Gillian Kaufman 
- * Date: November 24, 2020
- * Description: Test three different algorithms for sorting an array of random integers.
- * Input: N/A
- * Output: Screen
- */
+
+import java.security.SecureRandom;
 import java.util.*;
 
 public class ProjectThreeDriver
 {
-	private static Random rand = new Random(); // Create object of Random class for generating random integers
+	private static Random rand = new SecureRandom(); // Create object of Random class for generating random integers
 
 	/* Author: Mark A. Weiss 
 	 * Edits: Gillian Kaufman 
