@@ -1,9 +1,5 @@
-/* Author: Gillian Kaufman 
- * Date: October 26, 2020
- * Description: Create an alphabetical list of words from a file and print out the number of occurrences for each word and on what lines each word occurs.
- * Input: Keyboard, file
- * Output: Screen
- */
+
+import io.github.pixee.security.BoundedLineReader;
 import java.io.*;
 import java.util.*;
 import java.util.Map.Entry; 
@@ -29,7 +25,7 @@ public class Concordance
         TreeMap<String, Identifier> concordance = new TreeMap<>();
         
         // Read the file line by line until a null is returned 
-        while ((line = reader.readLine()) != null) 
+        while ((line = BoundedLineReader.readLine(reader, 5_000_000)) != null) 
         {
         	// Make the line all lower case just to make it easier for the conditionals to function
         	line = line.toLowerCase();
