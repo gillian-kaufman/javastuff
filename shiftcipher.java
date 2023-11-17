@@ -1,3 +1,4 @@
+import java.security.SecureRandom;
 import java.util.*;
 
 public class shiftcipher
@@ -11,7 +12,7 @@ public class shiftcipher
         String plaintext = sc.nextLine();
         
         // Random object for random number generator
-        Random rand = new Random();
+        Random rand = new SecureRandom();
         
         String ciphertext = "";
         char alphabet;

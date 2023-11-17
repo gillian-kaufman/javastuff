@@ -1,3 +1,4 @@
+import java.security.SecureRandom;
 import java.util.Random;
 
 public class shiftcipherdecryptor
@@ -8,7 +9,7 @@ public class shiftcipherdecryptor
         String ciphertext = "fjav";
         
         // Random object for random number generator
-        Random rand = new Random();
+        Random rand = new SecureRandom();
         
         // Extra variables
         char alphabet;
