@@ -102,9 +102,13 @@ public class ATMProgram
 			System.out.println("Would you like to select another option? Enter 1 for yes and 0 for no: ");
 			runAgain = keyboard.nextInt();
 			if (runAgain == 0)
-				continueATM = false;
+				{
+				    continueATM = false;
+				}
 			else
-				continueATM = true;
+				{
+				    continueATM = true;
+				}
 		} //End while
 	} // End main
 } //End class
